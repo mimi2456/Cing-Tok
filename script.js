@@ -26,6 +26,11 @@ function SanMode() {
     fetchJSON(JSON_URL);
 }
 
+function SkzMode() {
+    JSON_URL = "Skz.json";
+    fetchJSON(JSON_URL);
+}
+
 function AllMode() {
     JSON_URL = "All.json";
     fetchJSON(JSON_URL);
@@ -51,6 +56,7 @@ function showRandomImage() {
 function loadMode(mode) {
   const map = {
     All: "All.json",
+    Skz: "Skz.json",
     Chan: "Chan.json",
     Changbin: "Changbin.json",
     Han: "Han.json",
@@ -66,6 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const button = document.getElementById("button");
 
   const btnAll = document.getElementById("All");
+  const btnSkz = document.getElementById("Skz");
   const btnChan = document.getElementById("Chan");
   const btnChangbin = document.getElementById("Changbin");
   const btnHan = document.getElementById("Han");
@@ -75,6 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // We are on ModeSelect.html if those buttons exist
   if (btnAll || btnChan || btnChangbin) {
     if (btnAll) btnAll.addEventListener("click", () => location.href = "web.html?mode=All");
+    if (btnSkz) btnSkz.addEventListener("click", () => location.href = "web.html?mode=Skz");
     if (btnChan) btnChan.addEventListener("click", () => location.href = "web.html?mode=Chan");
     if (btnChangbin) btnChangbin.addEventListener("click", () => location.href = "web.html?mode=Changbin");
     if (btnHan) btnHan.addEventListener("click", () => location.href = "web.html?mode=Han");
