@@ -1,0 +1,73 @@
+body {
+    background: linear-gradient(135deg, #F879FC, #CD91CF, #943C99, #913594);
+    background-size: 500% 200%;
+    animation: gradientAnimation 15s ease infinite;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+button {
+    border-radius: 15px;
+    width: 20vw;
+    height: 10vh;
+    background-color: white;
+    color: black;
+    margin-top: 20px;
+    font-family: Open Sans, sans-serif;
+    font-size: 3vh;
+}
+
+img {
+    border-radius: 20px;
+    max-width: 90vw;
+    height: auto;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+#logo {
+    max-width: 50vw;
+    height: auto;
+    border-radius: 5vh;
+}
+
+h1 {
+    color: white;
+    font-family: Open Sans, sans-serif;
+    margin: 5vh 0 5vh 0;
+    font-size: clamp(24px, 5vw, 48px);
+}
+
+.mode {
+    width: 80%;
+    height: auto;
+}
+
+#back {
+    position: absolute;
+    width: 20%;
+    height: 5vh;
+    font-size: 2vh;
+    left: 2vw;
+    top: 2vh;
+}
+
+#ModeDisplay {
+    color: white;
+    height: 5vh;
+    width: auto;
+    font-family: Open Sans, sans-serif;
+    position: relative;
+    align-self: center;
+    font-size: 4vh;
+    margin-bottom: 3vh;
+}
